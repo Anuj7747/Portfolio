@@ -1500,7 +1500,7 @@ pre, code { overflow-wrap: anywhere; }
 @media (hover: none) and (pointer: coarse) {
   button, .btn, nav a, .theme-toggle, .menu-btn { min-height: 42px; }
 }
-<<<<<<< HEAD
+
 
 /* Profile photo */
 .profile-circle {
@@ -1685,5 +1685,4 @@ pre, code { overflow-wrap: anywhere; }
     box-shadow: none !important;
     box-sizing: border-box !important;
 }
-=======
->>>>>>> 5adfea560091d1af533e2eea3ff61cf009b38e96
+
