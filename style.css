@@ -1388,3 +1388,115 @@ button:focus-visible {
   .form-two-col { grid-template-columns: 1fr; }
   .draft-actions { width: 100%; }
 }
+
+/* EXTRA MOBILE POLISH — portfolio update */
+@media (max-width: 760px) {
+  html { scroll-padding-top: 76px; }
+  body { font-size: 15px; }
+  .nav-container { width: 92%; gap: 8px; }
+  .logo { font-size: 22px; }
+  .theme-toggle { margin-left: auto; white-space: nowrap; }
+  .menu-btn { min-width: 40px; min-height: 40px; flex-shrink: 0; }
+  nav { z-index: 1001; max-height: calc(100vh - 68px); overflow-y: auto; }
+  .hero { padding: 105px 0 52px; }
+  .hero-container, .container { width: 90%; }
+  .hero-container { gap: 28px; }
+  .hero h1 { font-size: clamp(36px, 10.5vw, 52px); line-height: 1.12; overflow-wrap: anywhere; }
+  .hero h2, .hero-subtitle { font-size: clamp(16px, 4.2vw, 20px); line-height: 1.5; }
+  .hero-description { line-height: 1.75; }
+  .hero-card { width: 100%; max-width: 100%; padding: 24px 18px; }
+  .section { padding: 58px 0; }
+  .section-heading h2 { font-size: clamp(27px, 7vw, 36px); overflow-wrap: anywhere; }
+  .about-grid, .contact-grid, .projects-grid, .cert-grid, .experience-grid,
+  .education-grid, .updates-grid, .form-two-col { grid-template-columns: minmax(0, 1fr); }
+  .project-card, .experience-card, .timeline-card, .contact-card, .update-card { min-width: 0; overflow-wrap: anywhere; }
+  .project-card, .experience-card { padding: 20px 17px; }
+  .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .skill-card { min-width: 0; padding: 14px 10px; overflow-wrap: anywhere; }
+  .achievement-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .achievement-card { min-width: 0; }
+  .activity-section .container, .activity-section .section-heading { min-width: 0; }
+  .activity-form, .draft-card, .update-card { padding: 18px 15px; }
+  .activity-form input, .activity-form select, .activity-form textarea,
+  input, select, textarea { width: 100%; min-width: 0; }
+  .activity-form button, .draft-card button, #export-updates { max-width: 100%; white-space: normal; }
+  .updates-grid { gap: 14px; }
+  .update-card h3, .draft-copy h4 { overflow-wrap: anywhere; }
+  .contact-socials { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .footer-container { gap: 12px; }
+}
+
+@media (max-width: 420px) {
+  .nav-container { width: 94%; gap: 6px; }
+  .logo { font-size: 20px; }
+  .theme-toggle { padding: 7px 8px; font-size: 10px; }
+  .menu-btn { min-width: 36px; min-height: 36px; }
+  .hero { padding-top: 96px; }
+  .hero h1 { font-size: clamp(33px, 10vw, 42px); letter-spacing: -1.2px; }
+  .hero-buttons .btn { justify-content: center; }
+  .skills-grid, .achievement-grid, .contact-socials { grid-template-columns: 1fr; }
+  .timeline-item { padding-left: 48px; }
+  .timeline::before { left: 16px; }
+  .timeline-dot { width: 34px; height: 34px; left: 0; }
+  .timeline-card { padding: 18px 14px; }
+  .section { padding: 48px 0; }
+}
+
+/* RESPONSIVE LAYOUT: phone, tablet, laptop and large desktop */
+*, *::before, *::after { box-sizing: border-box; }
+html { width: 100%; max-width: 100%; overflow-x: clip; }
+body { width: 100%; max-width: 100%; overflow-x: clip; }
+img, video, iframe, svg, canvas { max-width: 100%; }
+button, input, select, textarea { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+.container, .hero-container, .nav-container, .footer-container { max-width: 1200px; }
+section, header, footer, main { min-width: 0; }
+.hero-container > *, .about-grid > *, .projects-grid > *, .contact-grid > *,
+.cert-grid > *, .experience-grid > *, .education-grid > *, .updates-grid > *,
+.skills-grid > *, .achievement-grid > * { min-width: 0; }
+pre, code { overflow-wrap: anywhere; }
+
+/* Tablets and compact laptops */
+@media (min-width: 761px) and (max-width: 1024px) {
+  .nav-container, .container, .hero-container, .footer-container { width: min(92%, 960px); }
+  .nav-container { gap: 14px; }
+  .logo { font-size: clamp(21px, 2.6vw, 27px); }
+  nav { gap: clamp(10px, 1.7vw, 20px); }
+  nav a { font-size: 14px; }
+  .hero { padding-top: 115px; }
+  .hero-container { grid-template-columns: minmax(0, 1.15fr) minmax(260px, .85fr); gap: 28px; }
+  .hero h1 { font-size: clamp(38px, 5.4vw, 58px); line-height: 1.12; }
+  .hero-card { max-width: 100%; }
+  .about-grid, .contact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+  .projects-grid, .cert-grid, .experience-grid, .education-grid, .updates-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+  .skills-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .achievement-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .section { padding: 72px 0; }
+}
+
+/* Standard laptop / desktop */
+@media (min-width: 1025px) {
+  .container, .hero-container, .nav-container, .footer-container { width: min(88%, 1200px); }
+  .hero-container { gap: clamp(36px, 5vw, 72px); }
+  .hero h1 { font-size: clamp(48px, 4.4vw, 68px); }
+  .projects-grid, .cert-grid, .experience-grid, .education-grid, .updates-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* Narrow phones */
+@media (max-width: 380px) {
+  .container, .hero-container { width: 92%; }
+  .hero h1 { font-size: clamp(29px, 9.5vw, 36px); }
+  .hero-buttons { display: grid; grid-template-columns: minmax(0, 1fr); }
+  .hero-buttons .btn { width: 100%; }
+  .skills-grid, .achievement-grid, .contact-socials { grid-template-columns: minmax(0, 1fr); }
+  .form-actions, .draft-actions { align-items: stretch; flex-direction: column; }
+  .form-actions button, .draft-actions button { width: 100%; }
+}
+
+/* Respect mobile safe areas and make touch targets comfortable */
+@supports (padding: max(0px)) {
+  .navbar { padding-left: max(0px, env(safe-area-inset-left)); padding-right: max(0px, env(safe-area-inset-right)); }
+}
+@media (hover: none) and (pointer: coarse) {
+  button, .btn, nav a, .theme-toggle, .menu-btn { min-height: 42px; }
+}
