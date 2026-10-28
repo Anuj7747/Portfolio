@@ -292,3 +292,4 @@ async function updateCodeChefStats() {
 
 // Run when the page loads
 document.addEventListener("DOMContentLoaded", updateCodeChefStats);
+console.log("CodeChef script loaded!");
