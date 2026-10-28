@@ -261,3 +261,34 @@ if (themeToggle) {
     renderDrafts();
     loadPublished();
 })();
+// Automatically update CodeChef rating and contest stats
+async function updateCodeChefStats() {
+    try {
+        const response = await fetch(
+            "https://codechef-api-oaus.onrender.com/api/v1/users/anuj4188"
+        );
+
+        if (!response.ok) {
+            throw new Error("CodeChef API is unavailable");
+        }
+
+        const data = await response.json();
+
+        const ratingElement = document.getElementById("codechef-rating");
+        const contestsElement = document.getElementById("codechef-contests");
+
+        if (ratingElement && data.rating != null) {
+            ratingElement.textContent = `${data.rating} (${data.stars}★)`;
+        }
+
+        if (contestsElement && data.contestsParticipated != null) {
+            contestsElement.textContent = data.contestsParticipated;
+        }
+
+    } catch (error) {
+        console.error("CodeChef stats update failed:", error);
+    }
+}
+
+// Run when the page loads
+document.addEventListener("DOMContentLoaded", updateCodeChefStats);
